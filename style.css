@@ -1,31 +1,132 @@
-body {
-	background-image: linear-gradient(to right, #152b52, #458aff);
+/* ----------- General improvements ----------- */
+* {
+	box-sizing: border-box;
+	border-spacing: 0;
 }
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+body{
+	--se: flex;/* Used to hide/show category */
+}
+
+html {
+	font: 13pt fantasy, sans-serif;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	color: #222831;
+	background: #5433FF;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* ------------------ Header ------------------ */
+header {
+
+	display: block;
+	margin: 0;
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	text-align: center;
+	padding: 2rem 1rem;
+	background: #000000c4;
+	color: #fff;
+}
+
+/* -------------- Main container -------------- */
+main {
+	margin: auto;
+	width: 100%;
+	max-width: 60rem;
+	padding: 4rem 0.5rem 0rem;
+	overflow-x: hidden;
+}
+
+/* --------------- Grid columns --------------- */
+.grid {
+	flex-wrap: wrap;
+	display: flex;
+	margin: 0 -0.5rem;
+	align-items: stretch;
+}
+
+.grid>div {
+	padding: .5rem;
+	flex: 0 0 33.33%;
+}
+
+.grid>div>* {
+	margin-top: 0;
+}
+@media (max-width:60em){
+	.grid>div {
+		flex: 0 0 50%;
+	}
+}
+@media (max-width: 40em) {
+	.grid{
+	  flex-direction: column !important;
+	}
+  }
+
+/* ---------- H2 for Banner category ---------- */
+
+h2 {
+	display: var(--se);
+	align-items: center;
+	margin: 1em -1em;
+  }
+ h2:before, h2:after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	margin: 0 1em;
+	background: #fff;
+  }
+  
+  
+/* ------------------- Input ------------------ */
+
+input{
+	display: block;
+  background: #fff;
+  padding: .6rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  border: 0.1rem solid #BDBDBD;
+  outline: none;
+  height: 2.5rem;
+}
+input:hover{
+	border: 0.1rem solid #0F52BA !important;
+}
+
+/* ---------------- Search Bar ---------------- */
+#sb{
+	max-width: 300px;
+	margin:auto;
+}
+/* ------------------ Footer ------------------ */
+
+footer {
+	padding: 1rem 0;
+}
+
+/* --------------- Banners image -------------- */
+
 img {
 	max-width: 100%;
 	max-height: 100%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 3px;
+	transform: scale(.9);
+	transition: transform 250ms ease-in-out;
 }
-h2 {
-	font-family: fantasy, sans-serif;
-	font-weight: normal;
-	color: #FF7D1E;
-	width: 100%; 
-	text-align: center; 
-	border-bottom: 2px solid #FF7D1E; 
-	line-height: 0.1em;
-	margin: 0px 0 25px; 
-} 
-h2 span { 
-    background-image: linear-gradient(to right, #2C58A4, #2E5CAC); 
-    padding:0 10px; 
+
+img:hover {
+	transform: scale(1);
 }
-.parent {
-	width: 90%;
-	margin: auto;
-}
-.row {
-	padding-bottom: 5%;
-	display: flex;
-}
-.column {flex: 33%;}
-.centred {margin: 0 5%;}
