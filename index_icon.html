@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Icon Depot</title>
+	<link rel="icon" type="image_icon/png" href="favicon.png" sizes="16x16">
+	<link rel="stylesheet" href="style_icon.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>Icon Depot</h1>
+		<h4>A collection of icons for gaming platforms</h4>
+		<h4>Available Depots: <a href="index_background.html">backgrounds</a>, <a href="index.html">banner</a>, <a href="index_cover.html">covers</a>, <a href="index_icon.html">icons</a> </h4>
+	</header>
+
+	<main>
+		<input type="text" id="sb" onkeyup="searchBanner()" placeholder="Search for icon.." title="Type in a name">	
+		<h2>Missing</h2>
+			<div class="grid">
+				<div>
+					<img src="image_icon/Amazon/AmazonGames_GetFR3AKY.png" alt="Amazon Games">
+				</div>
+			</div>
+
+		<h2>Battle.Net</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Battle.Net/Battlenet_GetFR3AKY.png" alt="Battle.Net">
+			</div>
+		</div>
+
+		<h2>Epic Games</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Epic Games Store/EpicGames_GetFR3AKY.png" alt="Epic Games">
+			</div>
+		</div>
+
+		<h2>GOG</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/GOG Store/GOG_GetFR3AKY.png" alt="GOG Store">
+			</div>			
+		</div>		
+
+		<h2>Nintendo</h2>
+		<div class="grid">
+			<!-- Nintendo Switch (2017) -->
+			<div>
+				<img src="image_icon/Nintendo/Nintendo_GetFR3AKY.png" alt="Nintendo Switch">
+			</div>
+			<div>
+				<img src="image_icon/Nintendo/Nintendo_switch_joyrider3774.png" alt="Nintendo Switch">
+			</div>
+		</div>
+
+		<h2>Origin</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Origin/Origin_GetFR3AKY.png" alt="Origin">
+			</div>			
+		</div>
+
+		<h2>PlayStation</h2>
+		<div class="grid">
+		
+			<!-- Generic -->
+			<div>
+				<img src="image_icon/Playstation/Playstation_GetFR3AKY.png" alt="PlayStation">
+			</div>	
+			<!-- PlayStation (1995) -->
+			<div>
+				<img src="image_icon/Playstation/psx_joyrider3774.png" alt="PSX">
+			</div>			
+			<!-- PlayStation 2 (2000) -->			
+			<!-- PlayStation Portable (2004) -->
+			<!-- PlayStation 3 (2006) -->
+			<div>
+				<img src="image_icon/Playstation/ps3_joyrider3774.png" alt="PS3">
+			</div>
+			<!-- PlayStation Vita (2011) -->
+			<div>
+				<img src="image_icon/Playstation/psvita_joyrider3774.jpg" alt="PS Vita">
+			</div>
+			<!-- PlayStation 4 (2013) -->
+			<div>
+				<img src="image_icon/Playstation/ps4_joyrider3774.jpg" alt="PS4">
+			</div>
+			<!-- PlayStation 5 (2020) -->
+		</div>		
+		
+		<h2>Riot Games</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Riot Games/RiotGames_GetFR3AKY.png" alt="Riot Games">
+			</div>		
+		</div>
+
+		<h2>Rockstar</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Rockstar/Rockstar_GetFR3AKY.png" alt="Rockstar">
+			</div>			
+		</div>
+
+		<h2>Sega</h2>
+		<div class="grid">
+			<!-- SG-1000 (1983) -->
+			<!-- Master System (1985) -->
+			<!-- Mega Drive/Genesis (1988) -->			
+			<!-- Game Gear (1990) -->
+			<!-- Sega CD (1991) -->
+			<!-- Sega Pico (1993) -->
+			<!-- 32X (1994) -->
+			<!-- Sega Saturn (1994) -->
+			<!-- Dreamcast (1998) -->
+			<!-- Sega NAOMI (1998) -->
+			<!-- Atomiswave (2003) -->
+		</div>
+
+		<h2>Steam</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Steam/Steam_GetFR3AKY.png" alt="Steam">
+			</div>			
+		</div>
+
+		<h2>Twitch</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Twitch/Twitch_GetFR3AKY.png" alt="Twitch">
+			</div>
+		</div>
+
+		<h2>Ubisoft</h2>
+		<div class="grid">
+			<div>
+				<img src="image_icon/Ubisoft/Uplay_GetFR3AKY.png" alt="UPlay">
+			</div>			
+		</div>
+
+		<h2>Xbox</h2>
+		<div class="grid">
+			<!-- Xbox (2001) -->
+			<div>
+				<img src="image_icon/Xbox/xbox_joyrider3774.png" alt="OG Xbox">
+			</div>
+			<!-- Xbox 360 (2005) -->
+			<div>
+				<img src="image_icon/Xbox/xbox360_joyrider3774.png" alt="Xbox 360">
+			</div>
+			<!-- Xbox One (2013), Xbox One S (2016), Xbox One X (2017) -->
+			<div>
+				<img src="image_icon/Xbox/Xbox_GetFR3AKY.png" alt="Xbox One">
+			</div>	
+			<div>
+				<img src="image_icon/Xbox/xboxone_joyrider3774.jpg" alt="Xbox One">
+			</div>			
+			<!-- Xbox Game Pass (2017) -->
+			<!-- Project xCloud (2019) -->
+			<!-- Xbox Series S/X (2020) -->			
+		</div>
+	</main>
+
+</body>
+<style id="computed-style"></style>
+<script>
+	const style = document.getElementById("computed-style");
+	function searchBanner() {
+		var input, filter, imgs, img, i, txtValue;
+		input = document.getElementById("sb");
+		filter = input.value.toUpperCase();
+		if(filter.length>0)
+			document.body.style.setProperty("--se","none");
+		else
+			document.body.style.setProperty("--se","flex");
+		imgs = document.getElementsByTagName("img");
+		for (i = 0; i < imgs.length; i++) {
+			img = imgs[i];
+			txtValue = img.alt;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				img.parentElement.style.display = "";
+			} else {
+				img.parentElement.style.display = "none";
+			}
+		}
+
+	}
+</script>
+
+</html>

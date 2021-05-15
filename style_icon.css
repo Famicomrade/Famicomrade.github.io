@@ -40,6 +40,7 @@ a:active {
   color: #20BDFF;
 }
 
+
 /* ------------------ Header ------------------ */
 header {
 
@@ -73,7 +74,7 @@ main {
 
 .grid>div {
 	padding: .5rem;
-	flex: 0 0 33.33%;
+	flex: 0 0 75px;
 }
 
 .grid>div>* {
@@ -81,7 +82,7 @@ main {
 }
 @media (max-width:60em){
 	.grid>div {
-		flex: 0 0 50%;
+		flex: 0 0 75px;
 	}
 }
 @media (max-width: 40em) {
@@ -133,11 +134,11 @@ footer {
 	padding: 1rem 0;
 }
 
-/* --------------- Banners image -------------- */
+/* --------------- Icon image -------------- */
 
 img {
-	max-width: 100%;
-	max-height: 100%;
+	width: 48px;
+	max-height: 48px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	border-radius: 3px;
 	transform: scale(.9);

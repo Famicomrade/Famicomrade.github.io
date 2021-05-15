@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Cover Depot</title>
+	<link rel="icon" type="image_icon/png" href="favicon.png" sizes="16x16">
+	<link rel="stylesheet" href="style_cover.css">
+</head>
+
+<body>
+
+	<header>
+		<h1>Cover Depot</h1>
+		<h4>A collection of covers for gaming platforms</h4>
+		<h4>Available Depots: <a href="index_background.html">backgrounds</a>, <a href="index.html">banner</a>, <a href="index_cover.html">covers</a>, <a href="index_icon.html">icons</a> </h4>
+	</header>
+
+	<main>
+		<input type="text" id="sb" onkeyup="searchBanner()" placeholder="Search for cover.." title="Type in a name">	
+		<h2>Missing</h2>
+			<div class="grid">
+				<div>
+					<img src="image_cover/Missing/missing.jpg" alt="Missing">
+				</div>
+			</div>
+	</main>
+
+</body>
+<style id="computed-style"></style>
+<script>
+	const style = document.getElementById("computed-style");
+	function searchBanner() {
+		var input, filter, imgs, img, i, txtValue;
+		input = document.getElementById("sb");
+		filter = input.value.toUpperCase();
+		if(filter.length>0)
+			document.body.style.setProperty("--se","none");
+		else
+			document.body.style.setProperty("--se","flex");
+		imgs = document.getElementsByTagName("img");
+		for (i = 0; i < imgs.length; i++) {
+			img = imgs[i];
+			txtValue = img.alt;
+			if (txtValue.toUpperCase().indexOf(filter) > -1) {
+				img.parentElement.style.display = "";
+			} else {
+				img.parentElement.style.display = "none";
+			}
+		}
+
+	}
+</script>
+
+</html>
